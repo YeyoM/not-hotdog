@@ -1,10 +1,11 @@
 import { Fragment } from 'react'
 
+import HomeComponent from '../components/homeComponent/homeComponent'
+
 export default function Home() {
   return (
     <Fragment>
-      <h1>Not HotDog?</h1>
-      <p className="hola">holaaa</p>
+      <HomeComponent />
     </Fragment>
   )
 }
