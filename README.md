@@ -69,7 +69,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 YeyoM - [@YeyoMoreno24](https://twitter.com/YeyoMoreno24) - yeyomoreno2003@hotmail.com
 
-Lofi Terminal - [https://github.com/YeyoM/not-hotdog](https://github.com/YeyoM/not-hotdog)
+Not Hotdog? - [https://github.com/YeyoM/not-hotdog](https://github.com/YeyoM/not-hotdog)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
