@@ -6,9 +6,9 @@
   height: 100%;
   width: 100%;
   background-color: #f3defa;
-opacity: 1;
-background: radial-gradient(circle, transparent 20%, #f3defa 20%, #f3defa 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #f3defa 20%, #f3defa 80%, transparent 80%, transparent) 10px 10px, linear-gradient(#af9bff 0.8px, transparent 0.8px) 0 -0.4px, linear-gradient(90deg, #af9bff 0.8px, #f3defa 0.8px) -0.4px 0;
-background-size: 20px 20px, 20px 20px, 10px 10px, 10px 10px;
+  opacity: 1;
+  background: radial-gradient(circle, transparent 20%, #f3defa 20%, #f3defa 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #f3defa 20%, #f3defa 80%, transparent 80%, transparent) 10px 10px, linear-gradient(#af9bff 0.8px, transparent 0.8px) 0 -0.4px, linear-gradient(90deg, #af9bff 0.8px, #f3defa 0.8px) -0.4px 0;
+  background-size: 20px 20px, 20px 20px, 10px 10px, 10px 10px;
   transition: all 0.6s ease-in-out;
 }
 #active:checked ~ .results{
