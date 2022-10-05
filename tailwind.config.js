@@ -6,6 +6,13 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      'brutalist-blue': '#3101f5',
+    }
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide')  
+  ],
 }
