@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import ActionBar from '../components/actionbar/actionBar'
 
 export default function Camera() {
   
@@ -27,35 +28,31 @@ export default function Camera() {
     }
   }, [personalInfoVisible])
 
+  const handleResultsClick = () => {
+    setResultsVisible(true)
+  }
+
+  const handleCameraClick = () => {
+    setCameraVisible(true)
+  }
+
+  const handlePersonalInfoClick = () => {
+    setPersonalInfoVisible(true)
+  }
+
   return (
-    <div className='h-screen w-full'>
-      { 
-        resultsVisible 
-        ? <div className='h-screen w-full'>
-            Results 
-          </div>
-        : <div className='h-0 w-0 invisible'>
-            Results 
-          </div>
-      }
-      {
-        cameraVisible
-        ? <div className='h-screen w-full'>
-            Camera
-          </div>
-        : <div className='h-0 w-0 invisible'>
-            Camera
-          </div>
-      }
-      {
-        personalInfoVisible
-        ? <div className='h-screen w-full'>
-            Personal info
-          </div>
-        : <div className='h-0 w-0 invisible'>
-            Personal info
-          </div>
-      }
+    <div className='flex flex-row h-screen w-full '>
+      <input type='checkbox' id='active' className='hidden' />
+      <label for="active" class="menu-btn">
+        Abrir
+      </label>
+      <label for="active" class="close"></label>
+      <div class="results">
+        Results 
+      </div>
+      <div class="camera">
+        Camera
+      </div>
     </div>
   )
 }

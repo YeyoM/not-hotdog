@@ -12,3 +12,8 @@ html {
   background-image: radial-gradient(#3101f5 1px, #f3defa 1px);
   background-size: 20px 20px;  
 }
+
+div {
+  -webkit-transition: width .7s ease;
+  transition: width .7s ease;
+}
