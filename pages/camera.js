@@ -19,8 +19,10 @@ export default function Camera() {
       <div className="results">
         Results 
       </div>
-      <div className="camera">
-        {/** <Webcam videoConstraints={videoConstraints} />*/}
+      <div className="camera p-40">
+        <Webcam 
+          className='h-full w-full'
+          videoConstraints={videoConstraints} />
       </div>
     </div>
   )
