@@ -59,7 +59,7 @@ export default function Camera() {
               </svg>
             </label>
             <div className="results fixed top-0 right-[-100%] h-full w-full transition-all duration-500 ease-in-out items-center">
-              <div className='absolute top-[10%] self-center h-auto justify-center flex flex-col text-black p-4 bg-gray-100 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-40 border border-black sm:w-11/12 sm:left-[4.16%] xl:left-1/4 xl:w-1/2'>
+              <div className='absolute self-center h-auto justify-center flex flex-col text-black p-4 bg-gray-100 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-40 border border-black sm:w-11/12 sm:left-[4.16%] sm:top-8 xl:left-1/4 xl:w-1/2 lg:top-[10%]'>
                 {
                   imageSrc && (
                     <img src={imageSrc} alt="Your picture"/>
