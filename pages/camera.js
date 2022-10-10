@@ -62,7 +62,7 @@ export default function Camera() {
               <div className='absolute top-[10%] self-center h-auto justify-center flex flex-col text-black p-4 bg-gray-100 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-40 border border-black sm:w-11/12 sm:left-[4.16%] xl:left-1/4 xl:w-1/2'>
                 {
                   imageSrc && (
-                    <Image src={imageSrc} width={1280} height={720} alt="Your picture"/>
+                    <img src={imageSrc} alt="Your picture"/>
                   )
                 }
               </div>
