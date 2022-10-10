@@ -1,7 +1,13 @@
 #active:checked ~ .results{
   /*left: 0;*/
-  right:0;
+  right: 0;
 }
+
+#active:checked ~ .menu-btn {
+  transform: rotate(-180deg);
+}
+
+
 
 .results {
   background-color: #eeeeee;
