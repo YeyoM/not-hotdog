@@ -106,7 +106,7 @@ export default function Camera() {
                 <p className="text-xl font-semibold mb-2 p-4">
                   Doggo-meter: No, your picture is not a hot dog.
                 </p>
-                <div className="max-h-1/4 p-10">
+                <div className="max-h-1/4 p-10 mb-8 rounded-lg">
                   {
                     imageSrc
                     // eslint-disable-next-line @next/next/no-img-element
