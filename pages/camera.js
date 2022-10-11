@@ -99,11 +99,11 @@ export default function Camera() {
               </svg>
             </label>
             <div className="results fixed flex flex-col justify-center overflow-hidden top-0 right-[-100%] h-full w-full transition-all duration-500 ease-in-out items-center">
-              <div className='h-4/6 p-10 max-w-2xl justify-center flex flex-col text-black bg-gray-100 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-40 border border-black'>
+              <div className='h-fit md:p-12 sm:p-4 max-w-2xl justify-center overflow-hidden flex flex-col text-black bg-gray-100 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-40 border border-black'>
                 <h2 className="text-4xl p-4 mb-6 font-bold mt-6">
                   {imageSrc ? 'Is your picture a Hot Dog?' : 'No Photo Taken'}
                 </h2>
-                <div>
+                <div className="max-h-1/2">
                   {
                     imageSrc
                     // eslint-disable-next-line @next/next/no-img-element
