@@ -100,17 +100,17 @@ export default function Camera() {
             </label>
             <div className="results fixed flex flex-col justify-center overflow-hidden top-0 right-[-100%] h-screen w-full transition-all duration-500 ease-in-out items-center">
               <div className='h-fit md:p-12 sm:p-4 xl:top-0 top-8 max-w-2xl justify-center overflow-hidden flex flex-col text-black bg-gray-100 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-40 border border-black'>
-                <h2 className="text-4xl p-4 mb-2 font-bold mt-10">
+                <h2 className="text-4xl p-4 mb-1 font-bold mt-12">
                   {imageSrc ? 'Is your picture a Hot Dog?' : 'No Photo Taken'}
                 </h2>
-                <p className="text-xl font-semibold mb-2 p-4">
+                <p className="text-xl font-semibold mb-1 p-4">
                   Doggo-meter: No, your picture is not a hot dog.
                 </p>
                 <div className="max-h-1/4 p-10 mb-8 rounded-lg">
                   {
                     imageSrc
                     // eslint-disable-next-line @next/next/no-img-element
-                    ? <img src={imageSrc} className='object-scale-down' alt=""/>
+                    ? <img src={imageSrc} className='object-scale-down rounded-xl' alt=""/>
                     : null
                   }
                 </div>
