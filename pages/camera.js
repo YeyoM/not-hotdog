@@ -13,6 +13,7 @@ export default function Camera() {
 
   const [alert, setAlert] = useState(false)
   const [imageSrc, setImageSrc] = useState(null)
+  const [isMirrored, setIsMirrored] = useState(true)
 
   const webcamRef = useRef(null)
 
@@ -34,12 +35,14 @@ export default function Camera() {
         height: 720,
         facingMode: "environment",
       })
+      isMirrored(false)
     } else {
       setVideoConstraints({
         width: 1280,
         height: 720,
         facingMode: "user",
       })
+      isMirrored(true)
     }
   }
 
@@ -53,7 +56,7 @@ export default function Camera() {
       <div className="absolute -z-10 text-center w-full ">
         <Webcam 
           className='h-full w-full'
-          mirrored={true}
+          mirrored={isMirrored}
           screenshotFormat="image/jpeg"
           audio={false}
           videoConstraints={videoConstraints} 
