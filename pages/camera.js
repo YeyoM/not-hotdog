@@ -75,7 +75,7 @@ export default function Camera() {
               </button>
             : null
           }
-          <div className='justify-center inline-block text-center text-white z-10'>
+          <div className='justify-center inline-block text-center text-white z-0'>
             <button className='rounded-full active:bg-slate-500' onClick={capture}>
               <svg width="72px" height="72px" viewBox="0 0 72 72" id="emoji" xmlns="http://www.w3.org/2000/svg">
                 <g id="color">
@@ -98,20 +98,24 @@ export default function Camera() {
                 </g>
               </svg>
             </label>
-            <div className="results fixed top-0 right-[-100%] min-h-full w-full transition-all duration-500 ease-in-out items-center">
-              <div className='absolute self-center h-[80vh] justify-center flex flex-col text-black p-4 bg-gray-100 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-40 border border-black sm:w-11/12 sm:left-[4.16%] sm:top-8 xl:left-1/4 xl:w-1/2 lg:top-[1%]'>
-                <h3 className="text-5xl text-black font-bold p-8">
-                  Your photo, is it a hot dog?  
-                </h3>
-                {
-                  imageSrc && (
+            <div className="results fixed flex flex-col justify-center top-0 right-[-100%] h-full w-full transition-all duration-500 ease-in-out items-center">
+              <div className='h-4/6 p-10 max-w-2xl justify-center flex flex-col text-black bg-gray-100 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-40 border border-black'>
+                <h2 className="text-4xl p-4 mb-6 font-bold mt-6">
+                  {imageSrc ? 'Is your picture a Hot Dog?' : 'No Photo Taken'}
+                </h2>
+                <div>
+                  {
+                    imageSrc
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={imageSrc} alt="Your picture" className='object-scale-down'/>
-                  )
-                }
-                <p className="text-xl p-8">Result: No!</p>
+                    ? <img src={imageSrc} className='h-full w-full object-contain' alt=""/>
+                    : null
+                  }
+                </div>
+                <p className="text-xl font-semibold mt-4 mb-8">
+                  Doggo-meter: No, your picture is not a hot dog.
+                </p>
               </div>
-              <div className='block fixed h-24 inset-x-0 bottom-0 z-10 bg-black'>
+              <div className='fixed h-24 w-24 bottom-0 right-0 bg-black rounded-tl-xl'>
               </div>
             </div>
           </div>
