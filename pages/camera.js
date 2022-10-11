@@ -106,7 +106,7 @@ export default function Camera() {
                 {
                   imageSrc && (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={imageSrc} alt="Your picture"/>
+                    <img src={imageSrc} alt="Your picture" className='md:max-h-[50%]'/>
                   )
                 }
                 <p className="text-xl p-8">Result: No!</p>
