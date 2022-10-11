@@ -103,7 +103,7 @@ export default function Camera() {
                 <h2 className="text-4xl p-4 mb-6 font-bold mt-6">
                   {imageSrc ? 'Is your picture a Hot Dog?' : 'No Photo Taken'}
                 </h2>
-                <div className="max-h-1/2">
+                <div className="max-h-1/4 p-4">
                   {
                     imageSrc
                     // eslint-disable-next-line @next/next/no-img-element
