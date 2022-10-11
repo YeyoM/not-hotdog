@@ -99,14 +99,14 @@ export default function Camera() {
               </svg>
             </label>
             <div className="results fixed top-0 right-[-100%] min-h-full w-full transition-all duration-500 ease-in-out items-center">
-              <div className='absolute self-center h-[80vh] justify-center flex flex-col text-black p-4 bg-gray-100 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-40 border border-black sm:w-11/12 sm:left-[4.16%] sm:top-4 xl:left-1/4 xl:w-1/2 lg:top-[1%]'>
+              <div className='absolute self-center h-[80vh] justify-center flex flex-col text-black p-4 bg-gray-100 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-40 border border-black sm:w-11/12 sm:left-[4.16%] sm:top-8 xl:left-1/4 xl:w-1/2 lg:top-[1%]'>
                 <h3 className="text-5xl text-black font-bold p-8">
                   Your photo, is it a hot dog?  
                 </h3>
                 {
                   imageSrc && (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={imageSrc} alt="Your picture" className='md:max-h-[50%]'/>
+                    <img src={imageSrc} alt="Your picture" className='sm:max-h-1/2'/>
                   )
                 }
                 <p className="text-xl p-8">Result: No!</p>
