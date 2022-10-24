@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import React from 'react'
 import Webcam from "react-webcam"
 import { isMobile } from "react-device-detect"
@@ -54,14 +54,28 @@ export default function Camera() {
         </div>
       )}
       <div className="absolute -z-10 text-center w-full ">
-        <Webcam 
-          className='h-full w-full'
-          mirrored={isMirrored}
-          screenshotFormat="image/jpeg"
-          audio={false}
-          videoConstraints={videoConstraints} 
-          ref={webcamRef}
-        />
+        {
+          videoConstraints.facingMode === "user" ?
+          // webcam with mirrored image
+          <Webcam
+            className='h-full w-full'
+            audio={false}
+            ref={webcamRef}
+            screenshotFormat="image/jpeg"
+            videoConstraints={videoConstraints}
+            mirrored={true}
+          />
+          :
+          // webcam with non-mirrored image
+          <Webcam
+            className='h-full w-full'
+            audio={false}
+            ref={webcamRef}
+            screenshotFormat="image/jpeg"
+            videoConstraints={videoConstraints}
+            mirrored={false}
+          />
+        }
       </div>
       <div className='block fixed h-24 inset-x-0 bottom-0 z-10 bg-black'>
         <div className='flex justify-center h-full items-center'>
