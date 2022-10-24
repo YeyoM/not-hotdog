@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import React from 'react'
 import Webcam from "react-webcam"
 import { isMobile } from "react-device-detect"
@@ -17,6 +17,14 @@ export default function Camera() {
 
   const webcamRef = useRef(null)
 
+  useEffect(() => {
+    if (videoConstraints.facingMode === "user") {
+      setIsMirrored(true)
+    } else {
+      setIsMirrored(false)
+    }
+  }, [videoConstraints])
+
   const capture = React.useCallback(() => {
     const imageSrc = webcamRef.current.getScreenshot()
     setImageSrc(imageSrc)
@@ -33,14 +41,14 @@ export default function Camera() {
       setVideoConstraints({
         width: 1280,
         height: 720,
+        facingMode: "environment",
       })
-      setIsMirrored(false)
     } else {
       setVideoConstraints({
         width: 1280,
         height: 720,
+        facingMode: "user",
       })
-      setIsMirrored(true)
     }
   }
 
