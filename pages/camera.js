@@ -33,14 +33,12 @@ export default function Camera() {
       setVideoConstraints({
         width: 1280,
         height: 720,
-        facingMode: "environment",
       })
       setIsMirrored(false)
     } else {
       setVideoConstraints({
         width: 1280,
         height: 720,
-        facingMode: "user",
       })
       setIsMirrored(true)
     }
