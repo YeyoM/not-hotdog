@@ -35,14 +35,14 @@ export default function Camera() {
         height: 720,
         facingMode: "environment",
       })
-      // setIsMirrored(false)
+      setIsMirrored(false)
     } else {
       setVideoConstraints({
         width: 1280,
         height: 720,
         facingMode: "user",
       })
-      // setIsMirrored(true)
+      setIsMirrored(true)
     }
   }
 
@@ -54,28 +54,14 @@ export default function Camera() {
         </div>
       )}
       <div className="absolute -z-10 text-center w-full ">
-        {
-          videoConstraints.facingMode === "user" ?
-          // webcam with mirrored image
-          <Webcam
-            className='h-full w-full'
-            audio={false}
-            ref={webcamRef}
-            screenshotFormat="image/jpeg"
-            videoConstraints={videoConstraints}
-            mirrored={true}
-          />
-          :
-          // webcam with non-mirrored image
-          <Webcam
-            className='h-full w-full'
-            audio={false}
-            ref={webcamRef}
-            screenshotFormat="image/jpeg"
-            videoConstraints={videoConstraints}
-            mirrored={false}
-          />
-        }
+        <Webcam 
+          className='h-full w-full'
+          mirrored={isMirrored}
+          screenshotFormat="image/jpeg"
+          audio={false}
+          videoConstraints={videoConstraints} 
+          ref={webcamRef}
+        />
       </div>
       <div className='block fixed h-24 inset-x-0 bottom-0 z-10 bg-black'>
         <div className='flex justify-center h-full items-center'>
